@@ -4,6 +4,8 @@ Dockerized MRTG build for Raspberry Pi
 # RUN
 docker run -tdP -v /volume/to/mrtg:/var/www/mrtg azcoigreach/mrtg
 
+add '--restart unless-stopped' to the command line to deamonize mrtg
+
 # Notes
 This build is designed to evaluate a router at public@192.168.1.1, store that data in /var/www/mrtg and output the MRTG data to a shared volume. 
 
