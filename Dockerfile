@@ -15,12 +15,6 @@ RUN mkdir /etc/mrtg && \
   --output="/mrtgcfg/mrtg.cfg" \
   public@192.168.1.1
 
-#COPY mrtg /etc/init.d/mrtg
-#RUN chmod +x /etc/init.d/mrtg && chown root:root /etc/init.d/mrtg
-
-#RUN update-rc.d mrtg defaults
-
-
 # SET ROOT PASSWORD 
 RUN echo 'root:screencast' | chpasswd && \
   mkdir /var/run/sshd && \
