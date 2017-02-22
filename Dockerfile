@@ -1,4 +1,4 @@
-FROM resin/rpi-raspbian:latest
+FROM debian:jessie
  
 RUN apt-get update && \
   apt-get install -y openssh-server mrtg nano supervisor
