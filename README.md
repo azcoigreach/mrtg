@@ -19,9 +19,6 @@ Root password for the container is set in the Dockerfile.  Replace screencast wi
 
 # indexmaker
 Commands can also be sent to the container after is is running without SSH. Using the 'docker exec' command.
-
-Get container ID's : docker ps -a
-Rename the mrtg container: docker rename [container id] mrtg
-
 *It may take up to 5 minutes after mrtg runs for data to accumlate for the indemaker to function properly.
-Run mrtg indexmaker : docker exec mrtg indexmaker /mrtgcfg/mrtg.cfg
+
+docker exec [container id] indexmaker /mrtgcfg/mrtg.cfg --output=/var/www/mrtg/index.html
