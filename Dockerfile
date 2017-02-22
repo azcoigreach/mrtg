@@ -22,7 +22,7 @@ RUN mkdir /etc/mrtg && \
 
 
 # SET ROOT PASSWORD 
-RUN echo 'root:xeropus' | chpasswd && \
+RUN echo 'root:screencast' | chpasswd && \
   mkdir /var/run/sshd && \
     sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config && \
     sed -ri 's/#UsePAM no/UsePAM no/g' /etc/ssh/sshd_config && \
